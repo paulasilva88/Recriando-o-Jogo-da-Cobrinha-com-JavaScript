@@ -39,7 +39,6 @@ function update (event){
     /*37 botão para esquerda */
     if (event.keyCode == 39 && direction != "left") direction = "right";
     /*37 botão para esquerda */
-
     if (event.keyCode == 40 && direction != "up") direction = "down";
     /*37 botão para esquerda */
 }
@@ -64,7 +63,14 @@ function iniciarJogo(){
     if(direction =="up") snakeY -=box;
     if(direction =="down") snakeY +=box;
 
-    snake.pop(); /*Retira o último elemento da Array*/
+    if (snakeX != comidinha.x || snakeY !=comidinha.y){
+        snake.pop(); /*Retira o último elemento da Array*/
+    } else{
+        comidinha.x = Math.floor(Math.random() * 15 + 1) * box;
+        comidinha.y = Math.floor(Math.random() * 15 + 1) * box;
+    }
+
+    
 
     let cabecaCobrinha = {
         x: snakeX,
