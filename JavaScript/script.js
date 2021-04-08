@@ -19,13 +19,13 @@ function criarFundoDoJogo() { /*Criando background onde o jogo ocorrerá */
 
 function criarCobrinha(){
     for ( i=0; i<snake.length; i++){
-        context.fillStyle = "purple";
+        context.fillStyle = "darkblue";
         context.fillRect(snake[i].x, snake[i].y, box, box);
     }
 }
 
 function desenharcomidinha(){
-    context.fillStyle = "blue";
+    context.fillStyle = "green";
     context.fillRect(comidinha.x, comidinha.y, box, box)
 }
 
@@ -54,7 +54,7 @@ function iniciarJogo(){
     for (i=1; i< snake.length; i++){
         if(snake[0].x == snake [i].x && snake[0].y == snake[i].y){
             clearInterval(jogo);
-            alert("Gamer Over :( /n Recarregue a página para jogar novamente")
+            alert("                    Fim de jogo! :( \nRecarregue a página para jogar novamente")
         }
 
     }

@@ -1,5 +1,30 @@
-.jogo{
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #ccffa1;
+    color: #0d097a;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
+    flex-direction:column;
+    justify-content: start;
+    height: 95vh;
+    width: 95%;
+    align-items: center;
+    margin-top: 5px;
+}
+
+#regras{
+    width: 512px;
+    justify-content: center;
+}
+
+#verde{
+    color: #2d771f
+}
+
+.texto{
+    padding: 10px;
+    font-family: sans-serif;
 }
